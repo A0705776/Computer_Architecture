@@ -1,0 +1,20 @@
+module Translator (clk, ackDone, ackRecived, receiverData, enable);
+output reg enable=0, ackRecived=0;
+input clk,ackDone;
+input [7:0] receiverData;
+parameter s = 8'd115,
+		  e = 8'd101;
+		  
+always @(posedge clk) begin
+ackRecived <= 0;
+if(ackDone == 1)begin
+	if(enable)begin enable <= 0; end
+	else begin enable <= 1; end
+	ackRecived <= 1;
+end
+
+//enable <= 1;
+
+end //always
+
+endmodule

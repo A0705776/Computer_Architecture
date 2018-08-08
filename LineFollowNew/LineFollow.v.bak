@@ -1,0 +1,89 @@
+//Steven Ventura 5:41 PM Saturday, April 22, 2017
+module LineFollow (clk, enable, 
+			sensorLeftFiltered,sensorRightFiltered,sensorMiddleFiltered,
+			PWM_OutL, PWM_OutR, dirR, dirL
+			);
+input enable;
+			
+input sensorLeftFiltered,sensorMiddleFiltered,sensorRightFiltered;
+input clk;
+output PWM_OutL,PWM_OutR;
+output reg dirR=1,dirL=1;
+
+reg [7:0] leftMotorSpeed, rightMotorSpeed;
+
+PWM pwmleft (clk, leftMotorSpeed, PWM_OutL);
+PWM pwmright (clk, rightMotorSpeed, PWM_OutR);
+
+//the filtered sensor data. [2]=left,[1]=middle,[0]=right
+wire [2:0] sensors;
+
+assign sensors = {sensorLeftFiltered,sensorMiddleFiltered,sensorRightFiltered};
+
+parameter MAX = 8'b10111111,//75% duty
+		  HALF= 8'b01011111,//37.5% duty
+		  OFF = 8'b00000000;//0% duty
+
+//now do the actual linefollowing
+always @(posedge clk) begin
+//rightMotorSpeed <= OFF;
+//leftMotorSpeed <= OFF;
+
+if (enable == 1) begin
+dirL <= 1;
+dirR <= 1;
+case(sensors)
+3'b000: begin
+//at a "T" intersection 
+rightMotorSpeed <= MAX;
+leftMotorSpeed <= MAX;
+end
+3'b001:begin
+//drifting to the right
+rightMotorSpeed <= MAX;
+leftMotorSpeed <= HALF;
+end
+3'b010:begin
+//ERROR (ignore)
+rightMotorSpeed <= MAX;
+leftMotorSpeed <= MAX;
+end
+3'b011:begin
+//went too far to the right
+rightMotorSpeed <= OFF;
+leftMotorSpeed <= MAX;
+end
+3'b100:begin
+//drifting to the left
+rightMotorSpeed <= HALF;
+leftMotorSpeed <= MAX;
+end
+3'b101:begin
+//running in the middle
+rightMotorSpeed <= MAX;
+leftMotorSpeed <= MAX;
+end
+3'b110:begin
+//went too far to the left
+rightMotorSpeed <= OFF;
+leftMotorSpeed <= MAX;
+end
+3'b111:begin
+//end of the line
+rightMotorSpeed <= OFF;
+leftMotorSpeed <= OFF;
+end
+
+endcase
+end//end ifenable
+//else begin 
+//rightMotorSpeed <= OFF;
+//leftMotorSpeed <= OFF; 
+//aend
+
+end//end always
+
+
+
+
+endmodule

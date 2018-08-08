@@ -1,0 +1,12 @@
+|Top
+inA => inA.IN1
+inB => inB.IN1
+out << test:ck.port2
+
+
+|Top|test:ck
+inA => out.IN0
+inB => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

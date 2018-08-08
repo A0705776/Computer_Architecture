@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Alamin/Documents/ComputerArchitecture
+vALU
+Z0 !s110 1487111180
+!i10b 1
+!s100 0JBAMh5AlV7JZW3=DdQc40
+IegKEEKTn3A5ie8Ka0jUP83
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Alamin/Documents/ComputerArchitecture/ModelSim
+w1487110667
+8C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/ALU_add_sub_and_or_32_bit.v
+FC:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/ALU_add_sub_and_or_32_bit.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1487111180.000000
+!s107 C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/ALU_add_sub_and_or_32_bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/ALU_add_sub_and_or_32_bit.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@a@l@u
+vSecurity_System
+Z7 !s110 1487090917
+!i10b 1
+!s100 WHD?UF5@Ri8<W;lVYURNY1
+In;LZ2A__J90f27EZiGUF^2
+R1
+R2
+w1486243626
+8C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/Security_System.v
+FC:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/Security_System.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1487090917.000000
+!s107 C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/Security_System.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/Security_System.v|
+!i113 1
+R5
+R6
+n@security_@system
+vTB_ALU
+R0
+!i10b 1
+!s100 BPd?dz_L>YcaLHg9AbRId2
+I6=GnB9n2JgB4Gon5jPHRJ0
+R1
+R2
+w1487111164
+8C:\Users\Alamin\Documents\ComputerArchitecture\ModelSim\TB_ALU_add_sub_and_or_32_bit.v
+FC:\Users\Alamin\Documents\ComputerArchitecture\ModelSim\TB_ALU_add_sub_and_or_32_bit.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:\Users\Alamin\Documents\ComputerArchitecture\ModelSim\TB_ALU_add_sub_and_or_32_bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Alamin\Documents\ComputerArchitecture\ModelSim\TB_ALU_add_sub_and_or_32_bit.v|
+!i113 1
+R5
+R6
+n@t@b_@a@l@u
+vtb_Security_System
+R7
+!i10b 1
+!s100 D?d4jn<JR@l5b9lFhRg7T2
+IE2K<PoVgfJled?PKXUF>U2
+R1
+R2
+w1486246240
+8C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/tb_Security_System.v
+FC:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/tb_Security_System.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1487090916.000000
+!s107 C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/tb_Security_System.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Alamin/Documents/ComputerArchitecture/ModelSim/tb_Security_System.v|
+!i113 1
+R5
+R6
+ntb_@security_@system

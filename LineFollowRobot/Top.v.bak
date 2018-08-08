@@ -1,0 +1,7 @@
+module Top(clk,PWM_Out, dir);
+	input  clk;
+	output PWM_Out, dir;
+
+	motor right(clk,PWM_Out, dir);
+	motor left(clk,PWM_Out, dir);
+endmodule

@@ -1,0 +1,17 @@
+module motor(clk,PWM_Out, dir);
+	input clk;
+	output PWM_Out;
+	output dir = 0;
+	reg rst = 0, enable = 1;
+	reg[7:0] speed = 8'b10000000;
+	
+	PWM myPWM(clk,rst,speed,enable,PWM_Out);
+	delay myDelay(clk,rst,3,dir);
+	
+	always@(posedge clk)begin
+		rst = 0;
+		enable = 1;
+	end
+endmodule 
+		
+	
